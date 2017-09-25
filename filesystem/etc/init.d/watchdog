@@ -1,0 +1,9 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2014 OpenWrt.org
+
+START=99
+
+start() {
+	/sbin/watchdog -t 5 -T 60 /dev/watchdog
+	}
+}

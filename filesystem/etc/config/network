@@ -1,0 +1,74 @@
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config interface 'eth0'
+        option ifname 'eth0'
+        option proto 'dhcp'
+#        option ipaddr '192.168.1.66'
+#        option netmask '255.255.255.0'
+
+config interface 'TN0'
+	option 'ifname' 'TN0'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN1'
+	option 'ifname' 'TN1'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN2'
+	option 'ifname' 'TN2'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN3'
+	option 'ifname' 'TN3'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN4'
+	option 'ifname' 'TN4'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN5'
+	option 'ifname' 'TN5'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN6'
+	option 'ifname' 'TN6'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN7'
+	option 'ifname' 'TN7'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN8'
+	option 'ifname' 'TN8'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+config interface 'TN9'
+	option 'ifname' 'TN9'
+	option 'proto' 'none'
+	option 'auto'	'1'
+
+#config interface 'wlan0'
+#        option ifname 'wlan0'
+#        option proto 'dhcp'
+
+#config interface 'TN'
+#	option 'type' 'bridge'
+#	option 'proto' 'none'
+#	option 'ifname' 'TN0 TN1 TN2 TN3 TN4 TN5 TN6 TN7 TN8 TN9'
+#	option 'auto'	'1'
+
+	
+
