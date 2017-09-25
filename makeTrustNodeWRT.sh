@@ -4,10 +4,11 @@
 OpenWRTDIR="openwrt"
 echo "You run this scrip for your own risk, a virtualised environmanet is recommended!"
 sleep 1
-echo "To accept this warning,enter your root password:"
+echo "To accept this warning, enter your root password:"
 sleep 1
 sudo apt-get update
-sudo apt-get install git gcc binutils bzip2 flex python perl make  grep unzip gawk subversion libz-dev linux-headers-generic linux-libc-dev libc-bin build-essential git-core libssl-dev libncurses5-dev unzip gawk zlib1g-dev subversion mercurial mtools openjdk-8-jdk
+sudo apt-get install git gcc binutils bzip2 flex python perl make  grep unzip gawk subversion libz-dev linux-headers-generic linux-libc-dev libc-bin build-essential git-core libncurses5-dev unzip gawk zlib1g-dev subversion mercurial mtools openjdk-8-jdk
+#libssl-dev 
 git clone git://github.com/openwrt/openwrt.git $OpenWRTDIR
 cd $OpenWRTDIR
 ln -s ../filesystem files
