@@ -10,11 +10,14 @@ sudo apt-get update
 sudo apt-get install git gcc binutils bzip2 flex python perl make  grep unzip gawk subversion libz-dev linux-headers-generic linux-libc-dev libc-bin build-essential git-core libssl-dev libncurses5-dev unzip gawk zlib1g-dev subversion mercurial mtools openjdk-8-jdk
 git clone git://github.com/openwrt/openwrt.git $OpenWRTDIR
 cd $OpenWRTDIR
+ln -s ../filesystem files
 echo "src-git InnoRouteTN https://github.com/InnoRoute/packages.git" >> feeds.conf.default
 scripts/feeds update InnoRouteTN
 scripts/feeds install -p InnoRouteTN
 scripts/feeds install -p InnoRouteTN TrustNode
 scripts/feeds update -a
 scripts/feeds install -a
-
+cp ../default.config .config
+make defconfig
+make -j8 V=99
 
