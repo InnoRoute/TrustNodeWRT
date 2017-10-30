@@ -2,6 +2,9 @@ config system
         option hostname Trustnode
         option timezone UTC
         option ttylogin 0
+        option conloglevel 4
+        option klogconloglevel 4
+        option log_file /var/log/messages
 
 config timeserver ntp
         list server     0.openwrt.pool.ntp.org

@@ -59,6 +59,36 @@ config interface 'TN9'
 	option 'ifname' 'TN9'
 	option 'proto' 'none'
 	option 'auto'	'1'
+	
+config interface 'TN10'
+	option 'ifname' 'TN10'
+	option 'proto' 'none'
+	option 'auto'	'1'
+	
+config interface 'TN11'
+	option 'ifname' 'TN11'
+	option 'proto' 'none'
+	option 'auto'	'1'
+	
+config interface 'TN12'
+	option 'ifname' 'TN12'
+	option 'proto' 'none'
+	option 'auto'	'1'
+	
+config interface 'TN13'
+	option 'ifname' 'TN13'
+	option 'proto' 'none'
+	option 'auto'	'1' 
+	
+config interface 'TN14'
+	option 'ifname' 'TN14'
+	option 'proto' 'none'
+	option 'auto'	'1'
+	
+config interface 'TN15'
+	option 'ifname' 'TN15'
+	option 'proto' 'none'
+	option 'auto'	'1'
 
 #config interface 'wlan0'
 #        option ifname 'wlan0'
@@ -67,7 +97,7 @@ config interface 'TN9'
 #config interface 'TN'
 #	option 'type' 'bridge'
 #	option 'proto' 'none'
-#	option 'ifname' 'TN0 TN1 TN2 TN3 TN4 TN5 TN6 TN7 TN8 TN9'
+#	option 'ifname' 'TN0 TN1 TN2 TN3 TN4 TN5 TN6 TN7 TN8 TN9 TN10 TN11 TN12 TN13 TN14 TN15'
 #	option 'auto'	'1'
 
 	
