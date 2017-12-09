@@ -1,6 +1,7 @@
 #!/bin/sh
 [ -f /etc/banner ] && cat /etc/banner
-uname -a
+uname -a #print kernel date
+/usr/share/InnoRoute/fpga_status.sh 1 # print fpga detaills
 [ -e /tmp/.failsafe ] && cat /etc/banner.failsafe
 fgrep -sq '/ overlay ro,' /proc/mounts && {
         echo 'Your JFFS2-partition seems full and overlayfs is mounted read-only.'

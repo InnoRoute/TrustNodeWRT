@@ -94,11 +94,11 @@ config interface 'TN15'
 #        option ifname 'wlan0'
 #        option proto 'dhcp'
 
-#config interface 'TN'
-#	option 'type' 'bridge'
-#	option 'proto' 'none'
-#	option 'ifname' 'TN0 TN1 TN2 TN3 TN4 TN5 TN6 TN7 TN8 TN9 TN10 TN11 TN12 TN13 TN14 TN15'
-#	option 'auto'	'1'
+config interface 'TN'
+	option 'type' 'bridge'
+	option 'proto' 'none'
+	option 'ifname' 'TN0 TN1 TN2 TN3 TN4 TN5 TN6 TN7 TN8 TN9 TN10 TN11 TN12 TN13 TN14 TN15'
+	option 'auto'	'1'
 
 	
 
