@@ -20,6 +20,6 @@ scripts/feeds install -p InnoRouteTN TrustNode
 scripts/feeds update -a
 scripts/feeds install -a
 cp ../default.config .config
-make defconfig
-make -j8 V=99
+yes "" | make defconfig
+yes "" | make -j8 V=99
 
