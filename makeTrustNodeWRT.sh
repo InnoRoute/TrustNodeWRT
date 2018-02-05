@@ -21,7 +21,7 @@ scripts/feeds install -p InnoRouteTN
 scripts/feeds install -p InnoRouteTN TrustNode
 scripts/feeds update -a
 scripts/feeds install -a
-cp ../default.config .config
+cat ../default.config >> .config
 yes "" | make defconfig
 yes "" | make -j$tnumber V=99
 
