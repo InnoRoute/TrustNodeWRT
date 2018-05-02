@@ -23,6 +23,7 @@ scripts/feeds update -a
 scripts/feeds install -a
 cp ../default.config  .config
 yes  | make defconfig
+yes  | make kernel_oldconfig
 yes  | make oldconfig
 yes  | make -j$tnumber V=99
 
