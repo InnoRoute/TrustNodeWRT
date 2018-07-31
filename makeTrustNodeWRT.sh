@@ -26,5 +26,6 @@ cp ../default.config  .config
 yes  | make defconfig
 yes  | make kernel_oldconfig
 yes  | make oldconfig
+patches/install.sh
 yes  | make -j$tnumber V=99
 
