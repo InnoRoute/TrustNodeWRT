@@ -1,5 +1,5 @@
 #!/bin/bash
 #copys pach files to feeds
-#run from makeTrustNodeWRT.sh
+#run from makeTrustNodeWRT.sh inside openwrt dir
 #ulbricht@innoroute.de 2018
-
+cp ../patches/201-fpic.patch  package/libs/openssl/patches/
