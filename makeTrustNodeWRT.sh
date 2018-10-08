@@ -2,6 +2,7 @@
 #build TrustNode OpenWRT toolchain
 #ulbricht@innoroute.de 2017
 OpenWRTDIR="openwrt"
+revision="e1a1add5178b6a943c6272776ba3af06b3f953a8"
 echo "You run this scrip for your own risk, a virtualised environmanet is recommended!"
 sleep 1
 if [ $# -lt 1 ]; then
@@ -15,6 +16,7 @@ tnumber=$1
 fi
 git clone git://github.com/openwrt/openwrt.git $OpenWRTDIR
 cd $OpenWRTDIR
+git checkout $revision
 ln -s ../filesystem files
 echo "src-git InnoRouteTN https://github.com/InnoRoute/packages.git" >> feeds.conf.default
 scripts/feeds update InnoRouteTN
