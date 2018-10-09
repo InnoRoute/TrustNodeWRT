@@ -23,6 +23,8 @@ echo "src-git InnoRouteTN https://github.com/InnoRoute/packages.git" >> feeds.co
 scripts/feeds update InnoRouteTN
 scripts/feeds install -p InnoRouteTN
 scripts/feeds install -p InnoRouteTN TrustNode
+scripts/feeds update -a 
+scripts/feeds install -a
 cd feeds/packages
 git pull --unshallow
 git checkout $pkg_revision
