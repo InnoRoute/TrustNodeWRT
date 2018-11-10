@@ -2,8 +2,8 @@
 #build TrustNode OpenWRT toolchain
 #ulbricht@innoroute.de 2017
 OpenWRTDIR="openwrt"
-wrt_revision="e1a1add5178b6a943c6272776ba3af06b3f953a8"
-pkg_revision="5a31cbf7c5d5df184ff0187875285695a86d4469"
+wrt_revision="ded905ce431bfdb4809124e0f0a587013f980b07"
+pkg_revision="511f39f7d0f364b5c2ff8174e54feab692e8aea7"
 echo "You run this scrip for your own risk, a virtualised environmanet is recommended!"
 sleep 1
 if [ $# -lt 1 ]; then
