@@ -1,7 +1,7 @@
-Index: main.c
+Index: ./main.c
 ===================================================================
---- main.c
-+++ main.c
+--- ./main.c
++++ ./main.c
 @@ -17,7 +17,7 @@
   * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   */
