@@ -1,13 +1,31 @@
-Index: main.c
+Index: uhttpd-2018-08-23-b741dec3/main.c
 ===================================================================
---- main.c
-+++ main.c
-@@ -17,7 +17,7 @@
+--- uhttpd-2018-08-23-b741dec3.orig/main.c
++++ uhttpd-2018-08-23-b741dec3/main.c
+@@ -17,7 +17,9 @@
   * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   */
  
 -#define _DEFAULT_SOURCE
-+//#define _DEFAULT_SOURCE
++#ifndef _DEFAULT_SOURCE
++        #define _DEFAULT_SOURCE
++#endif
  #define _BSD_SOURCE
  #define _GNU_SOURCE
  #define _XOPEN_SOURCE	700
+Index: uhttpd-2018-08-23-b741dec3/file.c
+===================================================================
+--- uhttpd-2018-08-23-b741dec3.orig/file.c
++++ uhttpd-2018-08-23-b741dec3/file.c
+@@ -16,8 +16,9 @@
+  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+-
+-#define _DEFAULT_SOURCE
++#ifndef _DEFAULT_SOURCE
++	#define _DEFAULT_SOURCE
++#endif
+ #define _BSD_SOURCE
+ #define _DARWIN_C_SOURCE
+ #define _XOPEN_SOURCE 700
