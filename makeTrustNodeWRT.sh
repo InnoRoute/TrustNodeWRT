@@ -15,26 +15,25 @@ if [ $# -lt 1 ]; then
 else
 tnumber=$1
 fi
-git clone git://github.com/openwrt/openwrt.git $OpenWRTDIR
+git clone https://github.com/InnoRoute/openwrt.git $OpenWRTDIR
 cd $OpenWRTDIR
-git checkout $wrt_revision
+#git checkout $wrt_revision
 ln -s ../filesystem files
-echo "src-git InnoRouteTN https://github.com/InnoRoute/packages.git" >> feeds.conf.default
+cp ../feedsconf.default feeds.conf.default
 scripts/feeds update InnoRouteTN
 scripts/feeds install -p InnoRouteTN
 scripts/feeds install -p InnoRouteTN TrustNode
 scripts/feeds update -a 
 scripts/feeds install -a
-cd feeds/packages
-git pull --unshallow
-git checkout $pkg_revision
-cd ../..
+cp ../config.conf .config
+#cd feeds/packages
+#git pull --unshallow
+#git checkout $pkg_revision
+#cd ../..
 scripts/feeds update -a -i
 scripts/feeds install -a
-cp ../default.config  .config
+cp ../config.conf  .config
 yes  | make defconfig
 yes  | make kernel_oldconfig
 yes  | make oldconfig
-../patches/install.sh
 yes  | make -j$tnumber V=99
-

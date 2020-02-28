@@ -1,0 +1,19 @@
+#!/bin/ash
+ip -6 addr add AF20::0/12 dev eth0
+ip -6 addr add AF11::0/16 dev eth1
+ip -6 addr add AF12::0/16 dev eth2
+mkdir  /var/db
+touch /var/db/dhcpd6.leases
+dhcpd -6 -d -cf /etc/dhcpd6.conf &
+radvd
+ovsdb-tool create /usr/share/openvswitch/conf.db /usr/share/openvswitch/vswitch.ovsschema
+ovs-vsctl add-br tnbr
+ovs-vsctl add-port tnbr eth0
+ovs-vsctl add-port tnbr eth1
+ovs-vsctl add-port tnbr eth2
+ovs-ofctl del-flows tnbr
+ovs-ofctl add-flow tnbr dl_type=0x86dd,ipv6_dst=AF12::/16,priority=2,idle_timeout=0,action=output:3
+ovs-ofctl add-flow tnbr dl_type=0x86dd,ipv6_dst=AF11::/16,priority=2,idle_timeout=0,action=output:2
+ovs-ofctl add-flow tnbr dl_type=0x86dd,ipv6_dst=AF00::/8,priority=1,idle_timeout=0,action=output:1
+ovs-ofctl add-flow tnbr dl_type=0x86dd,ipv6_dst=FF00::/8,priority=1,idle_timeout=0,action=flood
+

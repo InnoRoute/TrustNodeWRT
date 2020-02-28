@@ -10,6 +10,10 @@ config interface 'eth0'
 #        option ipaddr '192.168.1.66'
 #        option netmask '255.255.255.0'
 
+config interface 'eth1'
+        option ifname 'eth1'
+        option proto 'dhcp'
+
 config interface 'TN0'
 	option 'ifname' 'TN0'
 	option 'proto' 'none'
@@ -95,9 +99,9 @@ config interface 'TNbr'
         option ifname 'TNbr'
         option proto 'dhcp'
 
-#config interface 'wlan0'
-#        option ifname 'wlan0'
-#        option proto 'dhcp'
+config interface 'wlan0'
+        option ifname 'wlan0'
+        option proto 'dhcp'
 
 #config interface 'TN'
 #	option 'type' 'bridge'

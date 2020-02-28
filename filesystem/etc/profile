@@ -28,4 +28,8 @@ export PS1='\u@\h:\w\$ '
         unset FILE
 }
 resize > /dev/null
+echo "Available package updates:"
+opkg list-upgradable
+TN_sys_ctrl_check.sh
+cat /usr/share/InnoRoute/unstablebitstream.info | grep unstable && echo "[WARING]: This image was generated with an unstable FPGA-bitstream. Use at your own risk."
 
