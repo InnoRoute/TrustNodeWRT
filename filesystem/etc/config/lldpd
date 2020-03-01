@@ -1,0 +1,29 @@
+config lldpd config
+	option enable_cdp 1
+	option enable_fdp 1
+	option enable_sonmp 1
+	option enable_edp 1
+
+	option agentxsocket /var/run/agentx.sock
+	
+	option lldp_class 4
+	option lldp_location "2:FR:6:Commercial Rd:3:Roseville:19:4"
+
+	# if empty, the distribution description is sent
+	option lldp_description "TrustNode FPGA based SDN TSN development platform"
+
+	# interfaces to listen on
+	list interface "loopback"
+	list interface "eth0"
+	list interface "TN0"
+	list interface "TN1"
+	list interface "TN2"
+	list interface "TN3"
+	list interface "TN4"
+	list interface "TN5"
+	list interface "TN6"
+	list interface "TN7"
+	list interface "TN8"
+	list interface "TN9"
+	list interface "TN10"
+	list interface "TN11"

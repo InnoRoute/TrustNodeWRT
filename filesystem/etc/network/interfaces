@@ -1,10 +1,11 @@
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 auto eth0
 #auto eth0
 #iface eth0 inet6 static
 #address AF20::
 #netmask 12
 
-#auto eth1
+auto eth1
 #iface eth1 inet6 static
 #address AF11::
 #netmask 16
