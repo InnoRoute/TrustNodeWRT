@@ -2,8 +2,6 @@
 #build TrustNode OpenWRT toolchain
 #ulbricht@innoroute.de 2017
 OpenWRTDIR="openwrt"
-wrt_revision="ded905ce431bfdb4809124e0f0a587013f980b07"
-pkg_revision="511f39f7d0f364b5c2ff8174e54feab692e8aea7"
 echo "You run this scrip for your own risk, a virtualised environmanet is recommended!"
 sleep 1
 if [ $# -lt 1 ]; then
@@ -20,19 +18,12 @@ cd $OpenWRTDIR
 #git checkout $wrt_revision
 ln -s ../filesystem files
 cp ../feedsconf.default feeds.conf.default
+scripts/feeds update -a 
+scripts/feeds install -a
 scripts/feeds update InnoRouteTN
 scripts/feeds install -p InnoRouteTN
 scripts/feeds install -p InnoRouteTN TrustNode
-scripts/feeds update -a 
-scripts/feeds install -a
 cp ../config.conf .config
-#cd feeds/packages
-#git pull --unshallow
-#git checkout $pkg_revision
-#cd ../..
-scripts/feeds update -a -i
-scripts/feeds install -a
-cp ../config.conf  .config
 yes  | make defconfig
 yes  | make kernel_oldconfig
 yes  | make oldconfig
